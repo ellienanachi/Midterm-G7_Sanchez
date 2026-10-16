@@ -1,9 +1,20 @@
-function RepoCard({ onClick, starCount }) {
+function RepoCard({
+  name,
+  description,
+  language,
+  commits,
+  dotfilesStars = 0,
+  onClick,
+  starCount = 0,
+  handleStarTodo,
+  todoStars = 0,
+  handleStarDotfiles,
+}) {
     return (
-      <>
+      <>        
         <div className="rounded-xl border-2 border-[#222222] p-8">
           <div className="flex items-center justify-between">
-            <h3 className="text-2xl font-bold">portfolio</h3>
+            <h3 className="text-2xl font-bold">{name}</h3>
             <button
               className="cursor-pointer rounded-lg border-2 border-[#222222] px-4 py-1 text-xl"
               onClick={onClick}
@@ -11,12 +22,12 @@ function RepoCard({ onClick, starCount }) {
               ★ {starCount}
             </button>
           </div>
-          <p className="mt-2 text-xl">My personal page built with React.</p>
+          <p className="mt-2 text-xl">{description}</p>
           <div className="mt-6 flex items-center gap-4 text-lg">
             <span className="rounded-full bg-[#222222] px-4 py-1 text-[#FAF3E1]">
-              JavaScript
+              {language}
             </span>
-            <span>48 commits</span>
+            <span>{commits} commits</span>
           </div>
         </div>
         <div className="rounded-xl border-2 border-[#222222] p-8">

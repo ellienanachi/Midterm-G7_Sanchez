@@ -2,8 +2,8 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Profile from "./components/Profile";
-import RepoCard from "./components/RepoCard";
 import Repositories from "./components/Repositories";
+
 
 function App() {
   const [followers, setFollowers] = useState(0);
@@ -46,34 +46,7 @@ function App() {
         <Profile />
       </div>
 
-      <main className="grid grid-cols-3 gap-8 px-20 pt-8">
-        <div className="rounded-xl border-2 border-[#222222] p-8">
-          <div className="flex items-center justify-between">
-            <h3 className="text-2xl font-bold">portfolio</h3>
-            <button
-              className="cursor-pointer rounded-lg border-2 border-[#222222] px-4 py-1 text-xl"
-              onClick={handleStarPortfolio}
-            >
-              ★ {portfolioStars}
-            </button>
-          </div>
-          <p className="mt-2 text-xl">My personal page built with React.</p>
-          <div className="mt-6 flex items-center gap-4 text-lg">
-            <span className="rounded-full bg-[#222222] px-4 py-1 text-[#FAF3E1]">
-              JavaScript
-            </span>
-            <span>48 commits</span>
-          </div>
-        </div> //
-        <div className="rounded-xl border-2 border-[#222222] p-8">
-          <RepoCard />
-        </div> //
-        <div className="rounded-xl border-2 border-[#222222] p-8">
-          <div className="flex items-center justify-between">
-            <RepoCard />
-          </div>
-        </div>
-      </main>
+      <Repositories todoStars={todoStars} onStarTodo={handleStarTodo} />
 
       <Footer />
     </div>
