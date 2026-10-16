@@ -7,22 +7,12 @@ import Repositories from "./components/Repositories";
 
 function App() {
   const [followers, setFollowers] = useState(0);
-  const [rate, setRate] = useState(500);
   const [portfolioStars, setPortfolioStars] = useState(0);
   const [todoStars, setTodoStars] = useState(0);
   const [dotfilesStars, setDotfilesStars] = useState(0);
 
   function handleFollow() {
     setFollowers(followers + 1);
-  }
-
-  function handleAddRate() {
-    setRate(rate + 100);
-  }
-
-  function handleReset() {
-    setFollowers(0);
-    setRate(500);
   }
 
   function handleStarPortfolio() {

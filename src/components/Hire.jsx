@@ -1,10 +1,10 @@
-function Hire(){
+function Hire({ hours, rate, handleAddHour, handleClear }) {
     return (
         <div className="mx-20 mt-8 flex items-center justify-between rounded-xl bg-[#222222] p-6 text-[#FAF3E1]">
             <div>
                 <h3 className="text-2xl font-bold">"Hire me for {hours} hours"</h3>
                 <p className="mt-1 text-xl">Total: 
-                    <span className="font-bold text-[#FA8112]">PHP {hours * props.rate}</span>
+                    <span className="font-bold text-[#FA8112]">PHP {hours * rate}</span>
                 </p>
             </div>
             <div className="flex gap-4">

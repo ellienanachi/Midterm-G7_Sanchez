@@ -1,4 +1,10 @@
-function Profile(){
+import { useState } from "react";
+
+function Profile({ hours = 0 }){
+  const [followers, setFollowers] = useState(0);
+  const handleFollow = () => setFollowers((count) => count + 1);
+  const handleReset = () => window.location.reload();
+
     return (
       <>
     <div>
