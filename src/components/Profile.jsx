@@ -35,6 +35,7 @@ function Profile(){
             Reset
           </button>
         </div>
+        <Hire hours={hours} rate={rate} handleAddHour={handleAddHour} handleClear={handleClear} />
       </>
     );
 }
