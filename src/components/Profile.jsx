@@ -1,8 +1,15 @@
 import { useState } from "react";
+import Bio from "./Bio";
+import Hire from "./Hire";
 
 function Profile({ hours = 0 }){
   const [followers, setFollowers] = useState(0);
+  const [rate, setRate] = useState(0);
+  const [currentHours, setCurrentHours] = useState(hours);
   const handleFollow = () => setFollowers((count) => count + 1);
+  const handleAddRate = () => setRate((currentRate) => currentRate + 1);
+  const handleAddHour = () => setCurrentHours((current) => current + 1);
+  const handleClear = () => setCurrentHours(0);
   const handleReset = () => window.location.reload();
 
     return (
@@ -41,7 +48,7 @@ function Profile({ hours = 0 }){
             Reset
           </button>
         </div>
-        <Hire hours={hours} rate={rate} handleAddHour={handleAddHour} handleClear={handleClear} />
+        <Hire hours={currentHours} rate={rate} handleAddHour={handleAddHour} handleClear={handleClear} />
       </>
     );
 }
