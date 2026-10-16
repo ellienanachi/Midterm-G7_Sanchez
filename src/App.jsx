@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   const [followers, setFollowers] = useState(0);
@@ -33,22 +35,15 @@ function App() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#FAF3E1] text-[#222222]">
-      <nav className="flex items-center justify-between bg-[#222222] px-20 py-6 text-[#FAF3E1]">
-        <h1 className="text-3xl font-bold">DevHub</h1>
-        <ul className="flex gap-10 text-xl">
-          <li>Profile</li>
-          <li>Repositories</li>
-          <li>Settings</li>
-        </ul>
-      </nav>
+    <div className="flex min-h-screen flex-col bg-[#FAF3E1]">
+      <Navbar />
 
       <div className="flex items-end justify-between bg-[#F5E7C6] px-20 py-10">
         <div>
           <header>
-            <h2 className="text-6xl font-bold">YOUR NAME</h2>
+            <h2 className="text-6xl font-bold">Chad Ellie N. Sanchez</h2>
             <p className="mt-1 text-2xl text-[#FA8112]">
-              @YOUR_GITHUB_USERNAME
+              @ellienanachi
             </p>
             <p className="mt-3 text-2xl">Front-end developer from Cebu City.</p>
           </header>
@@ -143,9 +138,7 @@ function App() {
         </div>
       </main>
 
-      <footer className="mt-auto bg-[#222222] px-20 py-6 text-center text-xl text-[#FAF3E1]">
-        <p>Every profile on DevHub is public.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
