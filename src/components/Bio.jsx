@@ -1,9 +1,9 @@
-function Bio() {
+function Bio({ name, username }) {
   return (
     <header>
-            <h2 className="text-6xl font-bold">Chad Ellie N. Sanchez</h2>
+            <h2 className="text-6xl font-bold">{name.Chad}{name.Ellie}{name.N}{name.Sanchez}</h2>
             <p className="mt-1 text-2xl text-[#FA8112]">
-              @ellienanachi
+              {username.ellienanachi}    
             </p>
             <p className="mt-3 text-2xl">Front-end developer from Cebu City.</p>
           </header>
