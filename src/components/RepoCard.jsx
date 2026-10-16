@@ -1,5 +1,4 @@
-function RepoCard(props) {
-    const { name, description, language, commits } = props;
+function RepoCard({ onClick, starCount }) {
     return (
       <>
         <div className="rounded-xl border-2 border-[#222222] p-8">
@@ -7,9 +6,9 @@ function RepoCard(props) {
             <h3 className="text-2xl font-bold">portfolio</h3>
             <button
               className="cursor-pointer rounded-lg border-2 border-[#222222] px-4 py-1 text-xl"
-              onClick={handleStarPortfolio}
+              onClick={onClick}
             >
-              ★ {portfolioStars}
+              ★ {starCount}
             </button>
           </div>
           <p className="mt-2 text-xl">My personal page built with React.</p>
