@@ -12,7 +12,7 @@ function App() {
   const [dotfilesStars, setDotfilesStars] = useState(0);
 
   function handleFollow() {
-    setFollowers(followers + 1);
+    setFollowers((currentFollowers) => currentFollowers + 1);
   }
 
   function handleStarPortfolio() {
@@ -33,10 +33,17 @@ function App() {
       <Navbar />
 
       <div className="flex items-end justify-between bg-[#F5E7C6] px-20 py-10">
-        <Profile />
+        <Profile followers={followers} onFollow={handleFollow} />
       </div>
 
-      <Repositories todoStars={todoStars} onStarTodo={handleStarTodo} />
+      <Repositories
+        portfolioStars={portfolioStars}
+        onStarPortfolio={handleStarPortfolio}
+        todoStars={todoStars}
+        onStarTodo={handleStarTodo}
+        dotfilesStars={dotfilesStars}
+        onStarDotfiles={handleStarDotfiles}
+      />
 
       <Footer />
     </div>
