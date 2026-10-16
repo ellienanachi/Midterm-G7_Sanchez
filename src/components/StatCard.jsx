@@ -1,4 +1,4 @@
-function StatCard({ value, label }) {
+function StatCard({ value }) {
   return (
     <div className="stat-card">
       <h3>{value}</h3>
