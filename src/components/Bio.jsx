@@ -1,4 +1,4 @@
-function Bio({ name, username }) {
+function Bio({ name,  }) {
   return (
     <header>
             <h2 className="text-6xl font-bold">{name}</h2>
