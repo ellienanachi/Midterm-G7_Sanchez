@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Profile from "./components/Profile";
 import RepoCard from "./components/RepoCard";
+import Repositories from "./components/Repositories";
 
 function App() {
   const [followers, setFollowers] = useState(0);
