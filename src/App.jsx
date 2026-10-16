@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Profile from "./components/Profile";
 
 function App() {
   const [followers, setFollowers] = useState(0);
@@ -23,6 +24,7 @@ function App() {
   }
 
   function handleStarPortfolio() {
+
     setPortfolioStars(portfolioStars + 1);
   }
 
@@ -40,13 +42,7 @@ function App() {
 
       <div className="flex items-end justify-between bg-[#F5E7C6] px-20 py-10">
         <div>
-          <header>
-            <h2 className="text-6xl font-bold">Chad Ellie N. Sanchez</h2>
-            <p className="mt-1 text-2xl text-[#FA8112]">
-              @ellienanachi
-            </p>
-            <p className="mt-3 text-2xl">Front-end developer from Cebu City.</p>
-          </header>
+          <Profile />
           <div className="mt-6 flex gap-6">
             <div className="w-48 rounded-xl bg-[#FAF3E1] py-4 text-center">
               <p className="text-4xl font-bold text-[#FA8112]">{followers}</p>
